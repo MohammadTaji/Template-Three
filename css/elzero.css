@@ -556,8 +556,7 @@ border-bottom: 1px #eee solid;
 .testimonials .container {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  row-gap: 50px;
-  column-gap: 40px;
+  gap: 40px;
 }
 .testimonials .container .box{
   background-color: #fff;
@@ -597,6 +596,91 @@ border-bottom: 1px #eee solid;
   line-height: 1.5;
 }
 /* End Testimonials */
+/* Start Team Members */
+.team-members{
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+.team-members .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  gap: 40px;
+}
+.team-members .container .box {
+  position: relative;
+  padding-top: 70px;
+}
+.team-members .container .box::before
+,.team-members .container .box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 10px;
+}
+.team-members .container .box::before{
+  background-color: #f3f3f3;
+  z-index: -2;
+  width: 80%;
+}
+.team-members .container .box::after{
+  width: 0%;
+  z-index: -1;
+  background-color: #e4e4e4;
+  transition: var(--transition);
+}
+.team-members .container .box:hover:after{
+  width: 80%;
+}
+
+.team-members .container .box .content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.team-members .container .box .content .image{
+}
+.team-members .container .box .content img{
+  border-radius: 10px;
+  max-width: 80%;
+  transition: var(--transition);
+}
+.team-members .container .box:hover .content img{
+  filter: grayscale();
+}
+.team-members .container .box .content .icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  row-gap: 40px;
+  flex-direction: column;
+  padding: 25px;
+}
+.team-members .container .box .content .icons i{
+  color: #777;
+  transition: var(--transition);
+}
+.team-members .container .box .content .icons i:hover{
+  color: var(--main-color);
+}
+.team-members .container .box .info{
+  padding: 20px;
+  padding-left: calc(20% + 20px);
+}
+.team-members .container .box .info h3{
+  color: var(--main-color);
+    font-size: 23px;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+.team-members .container .box:hover .info h3{
+  color: #777;
+}
+.team-members .container .box .info p{
+
+}
+/* End Team Members */
 /* Start Animations */
 @keyframes down {
   0%,
