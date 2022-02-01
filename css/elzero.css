@@ -761,6 +761,50 @@ border-bottom: 1px #eee solid;
   transform: skewX(-35deg);
 }
 /* End Services */
+/* Start Our-Skills */
+.our-skills{
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+.our-skills .container{
+  display: flex;
+}
+@media (max-width:991px) {
+  .our-skills .container .image{
+    display: none;
+  }
+}
+.our-skills .container .skills{
+  flex: 1;
+}
+.our-skills .container .skills h3{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+.our-skills .container .skills .progress{
+  height: 30px;
+  background-color: #eee;
+  position: relative;
+}
+.our-skills .container .skills .progress::before{
+  content: attr(data-progress);
+  position: absolute;
+  color: var(--main-color);
+  top: -40px;
+  right: 0;
+  padding: 3px 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  border: solid 1px #ccc;
+}
+.our-skills .container .skills .progress span{
+  display: block;
+  height: 30px;
+  background-color: var(--main-color);
+}
+/* End Our-Skills */
 /* Start Animations */
 @keyframes down {
   0%,
