@@ -4,7 +4,6 @@
     --section-color:#ececec;
     --transition: 0.3s;
     --padding-section:100px;
-    --transition-head:0.3s;
     --radius-head:13px;
 }
 *{
@@ -57,7 +56,7 @@ h2.main-head{
     padding: 10px 20px;
     position: relative;
     z-index: 2;
-    transition: var(--transition-head) linear;
+    transition: var(--transition) linear;
 }
 h2.main-head::before
 ,h2.main-head::after{
@@ -639,8 +638,6 @@ border-bottom: 1px #eee solid;
   flex-wrap: nowrap;
   justify-content: flex-end;
 }
-.team-members .container .box .content .image{
-}
 .team-members .container .box .content img{
   border-radius: 10px;
   max-width: 80%;
@@ -677,10 +674,93 @@ border-bottom: 1px #eee solid;
 .team-members .container .box:hover .info h3{
   color: #777;
 }
-.team-members .container .box .info p{
-
-}
 /* End Team Members */
+/* Start Services */
+.services{
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  background-color: var(--section-color);
+}
+.services .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  gap: 40px;
+}
+.services .container .box{
+  background-color: #fff;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%),
+              0 2px 4px 0 rgb(0 0 0 / 12%);
+  counter-increment: services;
+  position: relative;
+  top: 0;
+  transition: var(--transition);
+}
+.services .container .box::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: var(--main-color);
+  top: -3;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--transition);
+}
+.services .container .box:hover:before{
+  width: 100%;
+}
+.services .container .box:hover{
+  transform: translateY(-10px);
+}
+.services .container .box .content{
+  text-align: center;
+  padding: 40px;
+}
+.services .container .box .content i{
+  color: #d5d5d5;
+  font-size: 60px;
+}
+.services .container .box .content h3{
+  color: var(--main-color);
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: 900;
+}
+.services .container .box footer{
+  padding: 15px;
+  text-align: right;
+  background-color: #f9f9f9;
+  color: var(--main-color);
+  position: relative;
+  
+}
+.services .container .box footer::before{
+  content: "0"counter(services);
+  position: absolute;
+  background-color: var(--main-color);
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services .container .box footer::after{
+  content: "";
+  position: absolute;
+  background-color: #d5d5d5;
+  bottom: 0px;
+  left: 80px;
+  height: 101%;
+  width: 50px;
+  transform: skewX(-35deg);
+}
+/* End Services */
 /* Start Animations */
 @keyframes down {
   0%,
