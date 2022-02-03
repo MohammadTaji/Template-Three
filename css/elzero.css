@@ -1053,9 +1053,10 @@ border-bottom: 1px #eee solid;
 }
 .pricing .container .populer .label{
   position: absolute;
-  top: 150px;
+  top: 130px;
   right: 20px;
-  width: 150px;
+  width: 130px;
+  height: 40px;
   background-color: var(--main-color);
   color: #fff;
   font-size: 18px;
@@ -1068,9 +1069,9 @@ border-bottom: 1px #eee solid;
   content: '';
   position: absolute;
   top: 0;
-  right: -1px;
+  right: -40px;
   border: solid 20px;
-  border-color: transparent #fff transparent transparent;
+  border-color:var(--main-color) transparent var(--main-color) var(--main-color);
 }
 .pricing .container .box::before
 ,.pricing .container .box::after{
@@ -1150,6 +1151,74 @@ border-bottom: 1px #eee solid;
   background-color: var(--main-color);
 }
 /* End Pricing Plans */
+/* Start Top video */
+.video{
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+.video .holder{
+  display: flex;
+}
+.video .container .holder .options{
+  border: 1px solid #ddd;
+  background-color: #fff;
+  min-width: 300px;
+}
+@media (max-width:991px) {
+  .video .holder{
+    flex-wrap: wrap;
+  }
+  .video .container .holder .options{
+    width: 100%;
+  }
+  
+}
+.video .container .holder .options .title{
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-color);
+  padding: 20px;
+  font-size: 14px;
+  background-color: #f4f4f4;
+}
+.video .container .holder .options .title i{
+  font-size: 17px;
+}
+.video .container .holder .options ul li{
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 20px;
+  color: #777;
+  border-bottom: 1px solid var(--section-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.video .container .holder .options ul li:hover{
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+.video .container .holder .options ul li span{
+  display: block;
+  margin-top: 10px;
+  font-weight: normal;
+  color: #777;
+}
+.video .container .holder .preview{
+  padding: 10px;
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.video .container .holder .preview img{
+  max-width: 100%;
+}
+.video .container .holder .preview .info{
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 10px;
+}
+/* End Top video */
 /* Start Animations */
 @keyframes down {
   0%,
